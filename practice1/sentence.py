@@ -12,7 +12,11 @@ def main():
         words[word] = words.get(word, 0) + 1
         
     for word, count in sorted(words.items()):
-        if count > 1:
+        if count >= 1:
             print(f"{word}: {count}")
+        
+    for word, count in sorted(words.items()):    
+        if count > 1:
+            print(f"{word}")
 
 main()

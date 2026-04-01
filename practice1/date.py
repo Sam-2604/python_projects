@@ -20,14 +20,14 @@ def main():
 ]
     while True:
         try:
-            user_input = input("Enter date(DD/MM/YYYY): ")
-            parts = user_input.split("/")
+            user_input = input("Enter date(DD-MM-YYYY): ")
+            parts = user_input.split("-")
             day = int(parts[0])
             month = int(parts[1])
             year = int(parts[2])
             
             if not (1 <= day <= 31 and 1 <= month <= 12 and 1900 <= year <= 2100):
-                raise ValueError("Invalid Input")
+                raise ValueError("Please use DD-MM-YYYY format")
             
             print(f"{months[month - 1]} {day}, {year}")
             break

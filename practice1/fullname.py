@@ -7,7 +7,7 @@ def main():
         try:
             full_name = input("Enter a full name (First Last): ")
             last, first = validate_full_name(full_name)
-            print(f"{last.title()}, {first.title()}")
+            print(f"{last.title()}, {first.upper()}")
             break
         except ValueError as e:
             print(e)

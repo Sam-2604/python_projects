@@ -16,6 +16,10 @@ def main():
         except EOFError:
             for name in sorted(students.keys()):    
                 print(f"{name} {students[name]}")
+            break
+        
+        except ValueError:
+            print("Invalid input. Please enter in the format 'Name Score'.")
 
 def grade(x):
     x = float(x)
